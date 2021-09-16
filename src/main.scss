@@ -1,0 +1,30 @@
+body {
+    margin: 20px;
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
+.item {
+    background-color: #fafafa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #eee;
+    span {
+        margin-right: 10px;
+    }
+    .button {
+        background-color: #eee;
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover {
+            background-color: #c7c7c7;
+        }
+    }
+}
