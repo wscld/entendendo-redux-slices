@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToDo } from "../../models/todo.model";
-import { SliceState, actions } from "../../store/todoSlice";
+import { actions, SliceState } from "../../store/todoSlice";
 import { HeaderComponent } from "./HeaderComponent";
 import { ListComponent } from "./ListComponent";
 
@@ -11,7 +11,7 @@ export const HomeContainer = () => {
   const todos = useSelector((state: SliceState) => state.todos);
 
   const addTodo = (text: string) => {
-    const todo = new ToDo(todos.length + 1, text);
+    const todo = new ToDo(text);
     dispatch(actions.addTodo(todo));
   };
 

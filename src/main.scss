@@ -1,9 +1,43 @@
+$primary-color: #494949;
+$primary-color-dark: #272727;
 body {
     margin: 20px;
     ul {
         padding: 0;
         list-style-type: none;
     }
+    input {
+        border: 1px solid #eee;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        transition: 0.2s;
+        width: 100%;
+        &:focus {
+            outline: none;
+            border: 1px solid #bdbdbd;
+        }
+    }
+    button {
+        background-color: $primary-color;
+        padding: 15px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: white;
+        border: none;
+        height: 47px;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-color-dark;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 10px;
 }
 
 .item {
@@ -18,13 +52,14 @@ body {
         margin-right: 10px;
     }
     .button {
-        background-color: #eee;
+        background-color: $primary-color;
         border-radius: 10px;
         padding: 10px;
         cursor: pointer;
         transition: 0.1s;
+        color: white;
         &:hover {
-            background-color: #c7c7c7;
+            background-color: $primary-color-dark;
         }
     }
 }
